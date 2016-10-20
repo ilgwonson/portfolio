@@ -1,0 +1,44 @@
+<div class="grid">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 grid-item">
+        <div class="box-masonry"><a href="/detail/1" title="" class="box-masonry-image with-hover-overlay with-hover-icon"><img src="img/portfolio/business-card-26.jpg" alt="" class="img-responsive"></a>
+            <div class="box-masonry-text">
+                <h4> <a href="/detail">Name of the work 2</a></h4>
+                <div class="box-masonry-desription">
+                    <p> When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 grid-item javascript">
+        <div class="box-masonry"><a href="/detail/2" title="" class="box-masonry-image with-hover-overlay with-hover-icon"><img src="img/portfolio/business-card-26.jpg" alt="" class="img-responsive"></a>
+            <div class="box-masonry-text">
+                <h4> <a href="/detail/2">Name of the work 2</a></h4>
+                <div class="box-masonry-desription">
+                    <p> When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 grid-item">
+        <div class="box-masonry"><a href="/detail/3" title="" class="box-masonry-image with-hover-overlay with-hover-icon"><img src="img/portfolio/business-card-26.jpg" alt="" class="img-responsive"></a>
+            <div class="box-masonry-text">
+                <h4> <a href="/detail/3">Name of the work 2</a></h4>
+                <div class="box-masonry-desription">
+                    <p> When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var $grid = $('.grid').isotope({
+        itemSelector: '.grid-item',
+        layoutMode: 'fitRows'
+    });
+    $("#tag_list a").on("click",function(e){
+        $("#tag_list a").removeClass("on");
+        var type = $(this).addClass("on").data("keyword");
+        $grid.isotope({ filter: type });
+        e.preventDefault();
+    })
+</script>
