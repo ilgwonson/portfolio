@@ -13,6 +13,11 @@
     "express": "~4.13.4",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0",
-    "angular" : "latest"
+    "angular" : "latest",
+    "gulp": "3.9.1",
+    "gulp-cssnano" : "2.1.2 ",
+    "gulp-plumber" : "1.1.0",
+    "gulp-inject-string" : "1.1.0",
+    "gulp-replace" : "0.5.4"
   }
 }

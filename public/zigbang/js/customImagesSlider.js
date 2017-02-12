@@ -5,69 +5,69 @@
 (function(window){
 	if(window.imagesSlider) return false;
 	var evTouchStart;
-    var evTouchMove;
-    var evTouchEnd;
-    var resizeEvent = 'onorientationchange' in window ? 'orientationchange' : 'resize'
-    function inferInputModel() {
-	    if (window.navigator.msPointerEnabled) {
-       		return 'pointer';
-	    } else if (window.ontouchstart !== undefined) {
-	        return 'touch';
-	    } else {
-	        return 'unknown';
-	    }
+	var evTouchMove;
+	var evTouchEnd;
+	var resizeEvent = 'onorientationchange' in window ? 'orientationchange' : 'resize'
+	function inferInputModel() {
+		if (window.navigator.msPointerEnabled) {
+			return 'pointer';
+		} else if (window.ontouchstart !== undefined) {
+			return 'touch';
+		} else {
+			return 'unknown';
+		}
 	}
 	switch (inferInputModel()) {
-	    case 'pointer':
-	    	evTouchStart = "MSPointerDown";
-	        evTouchMove = "MSPointerMove";
-	        evTouchEnd = "MSPointerUp";
-	        /*  'MSPointerDown','MSPointerOut','MSPointerUp','MSPointerCancel','MSHoldVisual'  */
-	        break;
-	    case 'touch':
-	    	evTouchStart = "touchstart";
-	        evTouchMove = "touchmove";
-	        evTouchEnd = "touchend";
-	    	/* 'touchstart', 'touchend', 'mousedown', 'mouseout', 'mouseup' */
-	        break;
-	    default:
-	    	evTouchStart = "mousedown";
-	        evTouchMove = "mousemove";
-	        evTouchEnd = "mouseup";
-	        /* 'mousedown', 'mouseout', 'mouseup' */
-	        break;
+		case 'pointer':
+			evTouchStart = "MSPointerDown";
+			evTouchMove = "MSPointerMove";
+			evTouchEnd = "MSPointerUp";
+			/*  'MSPointerDown','MSPointerOut','MSPointerUp','MSPointerCancel','MSHoldVisual'  */
+			break;
+		case 'touch':
+			evTouchStart = "touchstart";
+			evTouchMove = "touchmove";
+			evTouchEnd = "touchend";
+			/* 'touchstart', 'touchend', 'mousedown', 'mouseout', 'mouseup' */
+			break;
+		default:
+			evTouchStart = "mousedown";
+			evTouchMove = "mousemove";
+			evTouchEnd = "mouseup";
+			/* 'mousedown', 'mouseout', 'mouseup' */
+			break;
 	};
 	var dummyStyle = document.createElement('div').style,
-	vendor = (function () {
-		var vendors = 't,webkitT,MozT,msT,OT'.split(','),
-			t,
-			i = 0,
-			l = vendors.length;
+		vendor = (function () {
+			var vendors = 't,webkitT,MozT,msT,OT'.split(','),
+				t,
+				i = 0,
+				l = vendors.length;
 
-		for ( ; i < l; i++ ) {
-			t = vendors[i] + 'ransform';
-			if ( t in dummyStyle ) {
-				return vendors[i].substr(0, vendors[i].length - 1);
+			for ( ; i < l; i++ ) {
+				t = vendors[i] + 'ransform';
+				if ( t in dummyStyle ) {
+					return vendors[i].substr(0, vendors[i].length - 1);
+				}
 			}
-		}
-		return false;
-	})(),
-	defaultOptions = {
-    	before : null,
-    	change : null,
-    	after : null
-    },
-    transform = prefixStyle('transform'),
-	transitionDuration = prefixStyle('transitionDuration'),
-	transitionTimingFunction = prefixStyle('transitionDuration'),
-    CONT_WIDTH = 720,
-	CONT_HEIGHT = 734,
-	CONT_RATIO = CONT_HEIGHT/CONT_WIDTH,
-    hasTouch = 'ontouchstart' in window,
-    DRAG_BOUNDARY = 0.15
-    circleWidth = 16,
-    circleMargin = 0
-    ;
+			return false;
+		})(),
+		defaultOptions = {
+			before : null,
+			change : null,
+			after : null
+		},
+		transform = prefixStyle('transform'),
+		transitionDuration = prefixStyle('transitionDuration'),
+		transitionTimingFunction = prefixStyle('transitionDuration'),
+		CONT_WIDTH = 720,
+		CONT_HEIGHT = 734,
+		CONT_RATIO = CONT_HEIGHT/CONT_WIDTH,
+		hasTouch = 'ontouchstart' in window,
+		DRAG_BOUNDARY = 0.15
+	circleWidth = 16,
+		circleMargin = 0
+	;
 	function prefixStyle (style) {
 		if ( vendor === '' ) return style;
 
@@ -101,7 +101,7 @@
 		}
 		this.$container.style.height = this.itemsHeight + "px";
 		this.funcArea = this.itemsWidth * DRAG_BOUNDARY;
-        this.curItem = 0;
+		this.curItem = 0;
 	}
 
 	ImagesSlider.prototype = {
@@ -131,7 +131,6 @@
 			function imgSizing(img){
 				var n_width = img.naturalWidth;
 				var n_height = img.naturalHeight;
-
 				if(n_width>self.itemsWidth || n_height>self.itemsHeight){
 					var p_r = self.itemsWidth / self.itemsHeight;
 					var c_r = n_width / n_height;
@@ -143,6 +142,7 @@
 						img.style.height =  self.itemsHeight + "px";
 					}
 				}
+				img.ondragstart = function() { return false; };
 				img.style.position = "absolute";
 				img.style.top = "50%";
 				img.style.left = "50%";
@@ -162,20 +162,32 @@
 		},
 		changeStatus : function(){
 			for(var i=0;i<this.items.length;i++){
-				this.items[i].className = this.items[i].className.replace(/focus/ig,"");
+				this.items[i].className = this.items[i].className.replace(/ focus/ig,"");
 			}
 			this.items[this.curItem+1].className = this.items[this.curItem+1].className + " focus";
 			if(this.defaultOptions.change) this.defaultOptions.change();
 		},
 		buildChain : function(){
 			var self = this;
-			this.$itemsWrapper.appendChild(this.items[0].cloneNode(true));
-			this.$itemsWrapper.insertBefore(this.items[this.itemsLength-1].cloneNode(true),this.items[0]);
+			var f_img = new Image();
+			f_img.src = this.items[0].querySelector("img").src;
+			f_img.className = "img";
+			var l_img = new Image();
+			l_img.src = this.items[0].querySelector("img").src;
+			l_img.className = "img";
+			var first_obj = this.items[0].cloneNode(false);
+			first_obj.appendChild(f_img);
+			var last_obj = this.items[this.itemsLength-1].cloneNode(false)
+			last_obj.appendChild(l_img);
+			this.$itemsWrapper.appendChild(first_obj);
+			this.$itemsWrapper.insertBefore(last_obj,this.items[0]);
 			this.items = this.$itemsWrapper.querySelectorAll(".item");
 			for(var i=0;i<this.items.length;i++){
+				this.items[i].style.position = "absolute";
 				this.items[i].style.width = self.itemsWidth + "px";
 				this.items[i].style.height = self.itemsHeight + "px";
 				this.items[i].style.left = i*self.itemsWidth + "px";
+				this.items[i].style.top = "0";
 			}
 			this.moveImage(-this.itemsWidth);
 		},

@@ -11,7 +11,7 @@ router.get("/detail/:idx", function(req, res, next) {
 });
 
 router.get('/zigbang', function(req, res, next) {
-    res.render('zigbang.html');
+    res.render('zigbang_amp.html');
 });
 
 router.get('/zigbang_json', function(req, res, next) {

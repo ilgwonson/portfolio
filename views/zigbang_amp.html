@@ -1,315 +1,322 @@
 <!DOCTYPE html>
-<html lang="en">
+<html amp lang="ko">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>직방</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1">
     <link rel="canonical" href="zigbang.html">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="customImagesSlider.js"></script>
+    <style amp-custom>body,html{width:100%;height:100%}html{overflow-y:scroll;font-size:10px}body,button,dd,div,dl,dt,fieldset,form,h1,h2,h3,h4,h5,li,ol,p,ul{margin:0;padding:0}body,button,h1,h2,h3,h4,input{font-family:Noto Sans KR,맑은\ 고딕,Malgun Gothic,Helvetica,AppleSDGothicNeo,sans-serif;font-size:12px;color:#383d41}body{background-color:#fff;text-align:left}fieldset,iframe,img{border:0 none}li{list-style:none}button,input,select{vertical-align:middle}img{vertical-align:top}a{color:#222;text-decoration:none}a:hover{color:#390;text-decoration:underline}a,button,input{-webkit-tap-highlight-color:rgba(0,0,0,0)}input[type=email],input[type=number],input[type=text],select,textarea{vertical-align:top;-webkit-appearance:none;-moz-appearance:none;-ms-appearance:none;-o-appearance:none;appearance:none;box-sizing:border-box}input[type=email],input[type=number],input[type=text]{height:29px;padding:6px 7px;background:#fff;color:#666}input[type=email],input[type=number],input[type=text],select{display:inline-block;width:100%;line-height:16px;vertical-align:middle;border:1px solid #cdcdcd}select{height:40px;padding:5px 31px 6px 5px;border-radius:0;font-family:Noto Sans KR;font-size:13px;color:#939393;background:#fff url(http://smtown.cloudapp.net/_img/ui/bg_select.png) 100% 0 no-repeat;text-overflow:"";text-indent:.01px}textarea{width:100%;min-height:200px;padding:6px 7px;border:1px solid #cdcdcd;color:#666}.sm_pink{color:#ed639e}.sm_black{color:#141414}.block,.show{display:block}.hide{display:none}.ellipsis{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis}#animTarget{position:absolute;top:-500px;left:-500px;width:1px;height:1px;z-index:-1}.nob{border:none!important}.fl{float:left}.fr{float:right}.clear:after{display:block;content:"";clear:both}.font_bold{font-weight:700}.text_center{text-align:center}.mt0{margin-top:0!important}.mt5{margin-top:5px!important}.mt10{margin-top:10px!important}.mt15{margin-top:15px!important}.mt20{margin-top:20px!important}.mt25{margin-top:25px!important}.mt30{margin-top:30px!important}.mt35{margin-top:35px!important}.mt40{margin-top:40px!important}.mt45{margin-top:45px!important}.mt50{margin-top:50px!important}.mb0{margin-bottom:0!important}.mb5{margin-bottom:5px!important}.mb10{margin-bottom:10px!important}.mb15{margin-bottom:15px!important}.mb20{margin-bottom:20px!important}.mb25{margin-bottom:25px!important}.mb30{margin-bottom:30px!important}.mb35{margin-bottom:35px!important}.mb40{margin-bottom:40px!important}.mb45{margin-bottom:45px!important}.mb50{margin-bottom:50px!important}.mr0{margin-right:0!important}.mr5{margin-right:5px!important}.mr10{margin-right:10px!important}.mr15{margin-right:15px!important}.mr20{margin-right:20px!important}.mr25{margin-right:25px!important}.mr30{margin-right:30px!important}.mr35{margin-right:35px!important}.mr40{margin-right:40px!important}.mr45{margin-right:45px!important}.mr50{margin-right:50px!important}.ml0{margin-left:0!important}.ml5{margin-left:5px!important}.ml10{margin-left:10px!important}.ml15{margin-left:15px!important}.ml20{margin-left:20px!important}.ml25{margin-left:25px!important}.ml30{margin-left:30px!important}.ml35{margin-left:35px!important}.ml40{margin-left:40px!important}.ml45{margin-left:45px!important}.ml50{margin-left:50px!important}.pt0{padding-top:0!important}.pt5{padding-top:5px!important}.pt10{padding-top:10px!important}.pt15{padding-top:15px!important}.pt20{padding-top:20px!important}.pt25{padding-top:25px!important}.pt30{padding-top:30px!important}.pt35{padding-top:35px!important}.pt40{padding-top:40px!important}.pt45{padding-top:45px!important}.pt50{padding-top:50px!important}.pb0,.pb5{padding-bottom:0!important}.pb10{padding-bottom:10px!important}.pb15{padding-bottom:15px!important}.pb20{padding-bottom:20px!important}.pb25{padding-bottom:25px!important}.pb30{padding-bottom:30px!important}.pb35{padding-bottom:35px!important}.pb40{padding-bottom:40px!important}.pb45{padding-bottom:45px!important}.pb50{padding-bottom:50px!important}.pr0{padding-right:0!important}.pr5{padding-right:5px!important}.pr10{padding-right:10px!important}.pr15{padding-right:15px!important}.pr20{padding-right:20px!important}.pr25{padding-right:25px!important}.pr30{padding-right:30px!important}.pr35{padding-right:35px!important}.pr40{padding-right:40px!important}.pr45{padding-right:45px!important}.pr50{padding-right:50px!important}.pl0{padding-left:0!important}.pl5{padding-left:5px!important}.pl10{padding-left:10px!important}.pl15{padding-left:15px!important}.pl20{padding-left:20px!important}.pl25{padding-left:25px!important}.pl30{padding-left:30px!important}.pl35{padding-left:35px!important}.pl40{padding-left:40px!important}.pl45{padding-left:45px!important}.pl50{padding-left:50px!important}.wper5,.wper10,.wper15,.wper20,.wper25,.wper30,.wper35,.wper40,.wper45,.wper50,.wper55,.wper60,.wper65,.wper70,.wper75,.wper80,.wper85,.wper90,.wper95,.wper100{width:5%}.header{position:relative;height:58px;background-color:#ffa509}.title{padding:20px 55px;font-size:18px;line-height:100%;color:#fff;font-weight:400}.header .btng a{position:absolute;padding:5px;box-sizing:border-box}.header .btng a.btn_back{top:50%;left:11px;width:32px;height:28px;margin-top:-14px;background:url(images/back_arr.png) no-repeat 50%;background-size:22px 18px}.header .btng a.btn_heart{top:50%;right:11px;width:38px;height:34px;margin-top:-17px;background:url(images/icon_heart.png) no-repeat 50%;background-size:28px 24px}.header .btng a.btn_share{top:50%;right:69px;width:27px;height:31px;margin-top:-15px;background:url(images/icon_share.png) no-repeat 50%;background-size:17px 21px}.container .article{padding:12px 10px 10px;background:#f6f6f6}.container .article .section{margin-top:16px}.container .article .section:first-child{margin-top:0}.container .article .section>h2{margin-bottom:10px;padding-left:7px;font-size:16px;font-weight:700;color:#616161;line-height:100%}.container .article .section>h2.str{color:#000}.container .article .section .contents{position:relative;background-color:#fff;border:1px solid #e1e1e1}.image_slider img{width:100%}.safe_deal_label{position:relative;padding:10px 50px 9px 11px;font-size:16px;line-height:30px;color:#fff;background:#0dc4bf}.safe_deal_label .btn_info{position:absolute;top:50%;right:12px;margin-top:-10px;width:20px;height:20px;background:url(images/icon_quetion.png) no-repeat;background-size:20px 20px}.detail_table{border-collapse:collapse;border:0;table-layout:fixed}.detail_table td,.detail_table th{padding-left:10px;height:40px;vertical-align:middle;text-align:left;font-size:12px}.detail_table th{width:95px;color:#6b6b6b;background-color:#fafafa}.detail_table td{color:#333}.detail_table tr:nth-child(3n) td,.detail_table tr:nth-child(3n) th{border-bottom:1px solid #eee}.cost{position:relative;top:1px;font-size:18px;color:#ff7900;font-weight:700}.ico_verify{position:absolute;top:15px;right:13px;width:105px;height:53px}.text_area{padding:10px 11px;font-size:12px;line-height:23px;color:#000}.build_info{position:relative;padding-left:147px;min-height:141px}.build_info .thumb{position:absolute;top:11px;left:11px}.build_info .info{padding:10px 16px 10px 0;font-size:12px;line-height:20px}.build_info .info .top{margin-bottom:4px;padding-bottom:6px;border-bottom:1px solid #eee;color:#343434}.build_info .info .top h3{padding:1px 0 3px;font-weight:700;color:#000}.build_info .info .bot li{padding-top:3px;color:#000}.build_info .info .bot li:first-child{padding-top:0}.map{width:100%;height:200px}.map_btns:after{clear:both;display:block;content:""}.map_btns a{float:left;padding:2px 0;width:50%;font-size:15px;color:#252525;text-align:center;box-sizing:border-box}.map_btns a:first-child{border-right:1px solid #e1e1e1}.map_btns a span{display:inline-block;padding:5px 0 5px 23px}.map_btns a.btn_view_map span{background:url(images/ico_map01.png) no-repeat 0;background-size:18px 17px}.map_btns a.btn_view_road span{background:url(images/ico_map02.png) no-repeat 0;background-size:15px 21px}.agent_info{padding:15px 13px 11px}.agent_info .top{position:relative;min-height:101px;padding:0 0 8px 109px}.agent_info .top .ph{position:absolute;top:0;left:0;width:100px;border:1px solid gray}.agent_info .top .ph .mark{display:block;height:25px;background:url(images/mark_safe_dealer.png) no-repeat 50% #0dc4bf;background-size:63px 17px}.agent_info .top .txt{position:relative;top:-4px;font-size:12px;color:#333;line-height:20px}.agent_info .top .txt h3{font-weight:700}.agent_info .info h4{margin-bottom:4px;padding:7px 4px;font-weight:700;border:1px solid #f6f6f6;border-width:1px 0}.agent_info .info li{line-height:20px;padding-left:14px;background:url(images/dot.png) no-repeat 4px;background-size:2px 2px}.agent_info .info li:first-child{margin-top:0}.info_box{margin-top:8px;padding:4px 14px;line-height:20px;color:#dedede;background-color:#848484}.info_box span{font-weight:700;color:#fff}.call_info{position:relative;border-top:1px solid #d5d5d5;background-color:#fff}.call_info .text{padding:11px 17px;line-height:20px;font-weight:700}.call_info .text .t01{margin-bottom:2px;color:#8e8e8e}.call_info .text .t02{margin-bottom:2px;font-size:14px;color:#111}.call_info .text .t03 .cost{font-size:14px;color:#eb6800}.call_info .text .t03 .ico_01{margin-left:5px;padding:1px;font-size:10px;color:#626262;line-height:100%;border:1px solid #787878;background-color:#eee}.call_info .btn_call{position:absolute;top:50%;right:16px;margin-top:-26px;width:163px;height:52px;border-radius:26px;background:url(images/btn_call.png) no-repeat 50% #fe5200;background-size:103px 21px}.image_slider{overflow:hidden;position:relative;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none;user-select:none}.image_slider.ty02{width:100%;position:absolute;top:50%;margin-top:-50%}.list_wrap{position:relative;width:100%;height:100%}.list_wrap>div{width:100%;height:100%;position:absolute;top:0;left:100%;background-color:#f4f4f4}.list_wrap>div:first-child{position:relative;top:0;left:0}.list_wrap>div .img{width:100%;-ms-user-select:none;-moz-user-select:none;-webkit-user-select:none;user-select:none}.pop{position:fixed;top:0;left:0;width:100%;height:100%;background:#000;transition:opacity .4s linear;opacity:0}.pop.open{opacity:1}.pop.close{display:none}.btn_pop_close{position:absolute;top:15px;right:15px;width:16px;height:16px;background:url(images/btn_x.png) no-repeat;background-size:16px 16px}</style>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
 </head>
 <body>
-    hi
-    <div class="wrap">
-        <div class="header">
-           <div class="btng">
-               <a href="#" class="btn_back"></a>
-               <a href="#" class="btn_share"></a>
-               <a href="#" class="btn_heart"></a>
-           </div>
-           <h1 class="title">
-               서울시 강남구 신사동
-           </h1>
+<div class="wrap">
+    <div class="header">
+        <div class="btng">
+            <a href="#" class="btn_back"></a>
+            <a href="#" class="btn_share"></a>
+            <a href="#" class="btn_heart"></a>
         </div>
-        <div class="container">
-            <div class="top_board">
-                <div id="thumbList" class="image_slider">
-                    <div class="list_wrap">
-                        <div class="item">
-                            <img class="img" src="images/room01.jpg" alt="방사진01"/>
-                        </div>
-                        <div class="item">
-                            <img class="img" src="images/room02.jpg" alt="방사진02"/>
-                        </div>
-                        <div class="item">
-                            <img class="img" src="images/room03.jpg" alt="방사진03"/>
-                        </div>
-                        <div class="item">
-                            <img class="img" src="images/room04.jpg" alt="방사진04"/>
-                        </div>
+        <h1 class="title">
+            서울시 강남구 신사동
+        </h1>
+    </div>
+    <div class="container">
+        <div class="top_board">
+            <div id="thumbList" class="image_slider">
+                <div class="list_wrap">
+                    <div class="item">
+                        <amp-img class="img" src="images/room01.jpg" alt="방사진01" width="720" height="734" layout="responsive"></amp-img>
                     </div>
-                </div>
-                <div class="safe_deal_label">
-                    <img width="94" height="30" src="images/mark_safe_dealer.png" alt="안심중개사"/>가 등록한 방입니다.
-                    <a href="#" class="btn_info"></a>
+                    <div class="item">
+                        <amp-img class="img" src="images/room02.jpg" alt="방사진02" width="720" height="734" layout="responsive"></amp-img>
+                    </div>
+                    <div class="item">
+                        <amp-img class="img" src="images/room03.jpg" alt="방사진03" width="720" height="734" layout="responsive"></amp-img>
+                    </div>
+                    <div class="item">
+                        <amp-img class="img" src="images/room04.jpg" alt="방사진04" width="720" height="734" layout="responsive"></amp-img>
+                    </div>
                 </div>
             </div>
-            <div class="article">
-                <div class="section">
-                    <h2 class="str">
-                        신사동 예쁜 쓰리룸
-                    </h2>
-                    <div class="contents">
-                        <span class="ico_verify"></span>
-                        <table class="detail_table">
-                            <tr>
-                                <th>
-                                    보증금
-                                </th>
-                                <td>
-                                    <span class="cost">10000</span> 만원
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    월세
-                                </th>
-                                <td>
-                                    <span class="cost">100</span> 만원
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    등록번호
-                                </th>
-                                <td>
-                                    1234567
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    주소
-                                </th>
-                                <td>
-                                    서울시 강남구 신사동
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    인근전철역
-                                </th>
-                                <td>
-                                    신사역(3호선) 압구정역(7호선)
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    층/건물층수
-                                </th>
-                                <td>
-                                    3층/4층
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    크기
-                                </th>
-                                <td>
-                                    전용면적 60.10m²18.18P
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    구조
-                                </th>
-                                <td>
-                                    쓰리룸+
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    건물형태
-                                </th>
-                                <td>
-                                    다세대/다가구
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    옵션
-                                </th>
-                                <td>
-                                    옷장
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    관리비
-                                </th>
-                                <td>
-                                    없음
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    관리비
-                                </th>
-                                <td>
-                                    없음
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    관리비 포함항목
-                                </th>
-                                <td>
-                                    수도
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    주차
-                                </th>
-                                <td>
-                                    불가능
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    엘레베이터
-                                </th>
-                                <td>
-                                    없음
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    입주가능일
-                                </th>
-                                <td>
-                                    4월 21일 이후
-                                </td>
-                            </tr>
-                        </table>
+            <div class="safe_deal_label">
+                <img width="94" height="30" src="images/mark_safe_dealer.png" alt="안심중개사"/>가 등록한 방입니다.
+                <a href="#" class="btn_info"></a>
+            </div>
+        </div>
+        <div class="article">
+            <div class="section">
+                <h2 class="str">
+                    신사동 예쁜 쓰리룸
+                </h2>
+                <div class="contents">
+                        <span class="ico_verify">
+                            <amp-img
+                                    src="images/verify_mark.png"
+                                    width="105"
+                                    height="53"
+                                    alt="실거래가 확인 @한국검증원"
+                            >
+                            </amp-img>
+                        </span>
+                    <table class="detail_table">
+                        <tr>
+                            <th>
+                                보증금
+                            </th>
+                            <td>
+                                <span class="cost">10000</span> 만원
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                월세
+                            </th>
+                            <td>
+                                <span class="cost">100</span> 만원
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                등록번호
+                            </th>
+                            <td>
+                                1234567
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                주소
+                            </th>
+                            <td>
+                                서울시 강남구 신사동
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                인근전철역
+                            </th>
+                            <td>
+                                신사역(3호선) 압구정역(7호선)
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                층/건물층수
+                            </th>
+                            <td>
+                                3층/4층
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                크기
+                            </th>
+                            <td>
+                                전용면적 60.10m²18.18P
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                구조
+                            </th>
+                            <td>
+                                쓰리룸+
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                건물형태
+                            </th>
+                            <td>
+                                다세대/다가구
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                옵션
+                            </th>
+                            <td>
+                                옷장
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                관리비
+                            </th>
+                            <td>
+                                없음
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                관리비
+                            </th>
+                            <td>
+                                없음
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                관리비 포함항목
+                            </th>
+                            <td>
+                                수도
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                주차
+                            </th>
+                            <td>
+                                불가능
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                엘레베이터
+                            </th>
+                            <td>
+                                없음
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>
+                                입주가능일
+                            </th>
+                            <td>
+                                4월 21일 이후
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="section">
+                <h2>
+                    상세설명
+                </h2>
+                <div class="contents">
+                    <div class="text_area">
+                        거실과 방이 크게 나온 신사동 3룸 입니다 ^^<br/>
+                        남향집이고 해가 너무 잘들고 근처 건물들에 비해서 집이 깨끗하고 뷰도 좋은편입니다.<br/>
+                        가격은 집주인 분과 상의 후에 조정 가능합니다!!<br/>
+                        깔끔하고 좋은 집 보러 연락주세요.
                     </div>
                 </div>
-                <div class="section">
-                    <h2>
-                        상세설명
-                    </h2>
-                    <div class="contents">
-                        <div class="text_area">
-                            거실과 방이 크게 나온 신사동 3룸 입니다 ^^<br/>
-                            남향집이고 해가 너무 잘들고 근처 건물들에 비해서 집이 깨끗하고 뷰도 좋은편입니다.<br/>
-                            가격은 집주인 분과 상의 후에 조정 가능합니다!!<br/>
-                            깔끔하고 좋은 집 보러 연락주세요.
-                        </div>
+            </div>
+            <div class="section">
+                <h2>
+                    담당자 한마디
+                </h2>
+                <div class="contents">
+                    <div class="text_area">
+                        공휴일 및 주말에도 언제든지 상담 가능<br/>
+                        차량 픽업 서비스 가능<br/>
+                        조건에 맞는 집 답사<br/>
+                        상담부터 계약까지 고객 맞춤형 서비스
                     </div>
                 </div>
-                <div class="section">
-                    <h2>
-                        담당자 한마디
-                    </h2>
-                    <div class="contents">
-                        <div class="text_area">
-                            공휴일 및 주말에도 언제든지 상담 가능<br/>
-                            차량 픽업 서비스 가능<br/>
-                            조건에 맞는 집 답사<br/>
-                            상담부터 계약까지 고객 맞춤형 서비스
+            </div>
+            <div class="section">
+                <h2>
+                    건물정보
+                </h2>
+                <div id="building_data" class="contents">
+                    <div class="build_info">
+                        <div class="thumb" id="b_img">
                         </div>
-                    </div>
-                </div>
-                <div class="section">
-                    <h2>
-                        건물정보
-                    </h2>
-                    <div id="building_data" class="contents">
-                        <div class="build_info">
-                            <div class="thumb" id="b_img">
-
-                            </div>
-                            <div class="info">
-                                <div class="top">
-                                    <h3 id="b_name"></h3>
-                                    <span id="b_address"></span>
-                                </div>
-                                <ul class="bot">
-                                    <li id="b_floor"></li>
-                                    <li id="b_rooms"></li>
-                                    <li id="b_eatablish"></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="section">
-                    <h2>
-                        위치보기
-                    </h2>
-                    <div class="contents">
-                        <div id="map" class="map">
-                        </div>
-                        <div class="map_btns">
-                            <a href="#" id="btn_view_map" class="btn_view_map"><span>지도보기</span></a>
-                            <a href="#" id="btn_view_road" class="btn_view_road"><span>로드뷰보기</span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="section">
-                    <h2>
-                        중개사정보
-                    </h2>
-                    <div class="contents">
-                        <div class="agent_info">
+                        <div class="info">
                             <div class="top">
-                                <div class="ph">
-                                    <img width="100" height="75" src="images/h_pic.png" alt="중개사이미지"/>
-                                    <span class="mark"></span>
-                                </div>
-                                <div class="txt">
-                                    <h3>대표공인중개사(이갑영)</h3>
-                                    <p>okok@naver.com</p>
-                                    <p>010-1234-4567</p>
-                                </div>
+                                <h3 id="b_name"></h3>
+                                <span id="b_address"></span>
                             </div>
-                            <div class="info">
-                                <h4>중개사무소 정보</h4>
-                                <ul>
-                                    <li>서울시 마포수, 테리 부동산 (김테리)</li>
-                                    <li>대표번호 : 1588-1688</li>
-                                </ul>
-                            </div>
+                            <ul class="bot">
+                                <li id="b_floor"></li>
+                                <li id="b_rooms"></li>
+                                <li id="b_eatablish"></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="info_box">
-                    이 방은 <span>공인중개사가 등록 중개 매물</span>입니다.<br/>
-                    공인중개사를 통해 <span>안전하게 계약</span>할수 있으며, <span>법정 중개 보수가 발생</span>합니다.
+            </div>
+            <div class="section">
+                <h2>
+                    위치보기
+                </h2>
+                <div class="contents">
+                    <div id="map" class="map">
+                    </div>
+                    <div class="map_btns">
+                        <a href="#" id="btn_view_map" class="btn_view_map"><span>지도보기</span></a>
+                        <a href="#" id="btn_view_road" class="btn_view_road"><span>로드뷰보기</span></a>
+                    </div>
                 </div>
             </div>
-            <div class="call_info">
-                <div class="text">
-                    <p class="t01">우정공인중개사(김성훈)</p>
-                    <p class="t02">중개보조원(한유진팀장)</p>
-                    <p class="t03"><span class="cost">010-5228-7825</span><span class="ico_01">중개</span></p>
+            <div class="section">
+                <h2>
+                    중개사정보
+                </h2>
+                <div class="contents">
+                    <div class="agent_info">
+                        <div class="top">
+                            <div class="ph">
+                                <amp-img width="100" height="75" src="images/h_pic.png" alt="중개사이미지"></amp-img>
+                                <span class="mark"></span>
+                            </div>
+                            <div class="txt">
+                                <h3>대표공인중개사(이갑영)</h3>
+                                <p>okok@naver.com</p>
+                                <p>010-1234-4567</p>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <h4>중개사무소 정보</h4>
+                            <ul>
+                                <li>서울시 마포수, 테리 부동산 (김테리)</li>
+                                <li>대표번호 : 1588-1688</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <a href="tel:01023336854" class="btn_call"></a>
+            </div>
+            <div class="info_box">
+                이 방은 <span>공인중개사가 등록 중개 매물</span>입니다.<br/>
+                공인중개사를 통해 <span>안전하게 계약</span>할수 있으며, <span>법정 중개 보수가 발생</span>합니다.
+            </div>
+        </div>
+        <div class="call_info">
+            <div class="text">
+                <p class="t01">우정공인중개사(김성훈)</p>
+                <p class="t02">중개보조원(한유진팀장)</p>
+                <p class="t03"><span class="cost">010-5228-7825</span><span class="ico_01">중개</span></p>
+            </div>
+            <a href="tel:01023336854" class="btn_call"></a>
+        </div>
+    </div>
+</div>
+<div id="pop" class="pop close" >
+    <a href="#" id="btn_pop_close" class="btn_pop_close"></a>
+    <div id="thumbList02" class="image_slider ty02">
+        <div class="list_wrap">
+            <div class="item">
+                <img class="img" src="images/room01.jpg" alt="방사진01" width="720" height="734" layout="responsive"/>
+            </div>
+            <div class="item">
+                <img class="img" src="images/room02.jpg" alt="방사진02" width="720" height="734" layout="responsive"/>
+            </div>
+            <div class="item">
+                <img class="img" src="images/room03.jpg" alt="방사진03" width="720" height="734" layout="responsive"/>
+            </div>
+            <div class="item">
+                <img class="img" src="images/room04.jpg" alt="방사진04" width="720" height="734" layout="responsive"/>
             </div>
         </div>
     </div>
-    <div id="pop" class="pop close">
-        <a href="#" id="btn_pop_close" class="btn_pop_close"></a>
-        <div id="thumbList02" class="image_slider ty02">
-            <div class="list_wrap">
-                <div class="item">
-                    <img class="img" src="images/room01.jpg" alt="방사진01"/>
-                </div>
-                <div class="item">
-                    <img class="img" src="images/room02.jpg" alt="방사진02"/>
-                </div>
-                <div class="item">
-                    <img class="img" src="images/room03.jpg" alt="방사진03"/>
-                </div>
-                <div class="item">
-                    <img class="img" src="images/room04.jpg" alt="방사진04"/>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=f5f84cc38aa7048486eb507fbe10918a&libraries=services"></script>
-    <script src="/zigbang/scripts.js"></script>
+</div>
+<script type="text/javascript" src="http://apis.daum.net/maps/maps3.js?apikey=f5f84cc38aa7048486eb507fbe10918a&libraries=services"></script>
+<script src="js/scripts.js"></script>
+<script src="js/customImagesSlider.js"></script>
 </body>
 </html>
